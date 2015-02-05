@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @end
 
@@ -16,12 +16,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //UIScrollView
     UIScrollView* scrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
     scrollView.contentSize = CGSizeMake(self.view.frame.size.width*8, self.view.frame.size.height);
-    
     [self.view addSubview:scrollView];
-    // Test3 adfsadfasdsdfaaaaaa
-    // Do any additional setup after loading the view, typically from a nib.
+    scrollView.pagingEnabled = YES;
+}
+
+-(void) scrollViewDidScroll:(UIScrollView *)scrollView {
+    NSLog(@"%f", scrollView.contentOffset.x);
 }
 
 - (void)didReceiveMemoryWarning {
