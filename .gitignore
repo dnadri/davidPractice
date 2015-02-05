@@ -1,0 +1,18 @@
+# Root level files
+.DS_Store
+.svn
+
+profile
+*~.nib
+.cshrc
+*.swp
+*.~
+
+#Project files
+
+David101.xcodeproj/xcuserdata/*
+David101.xcodeproj/project.xcworkspace/xcuserdata/*
+David101.xcworkspace/xcshareddata/*.xcheckout
+
+#Cocoa pods
+Pods
