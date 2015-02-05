@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIScrollView* scrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
