@@ -18,6 +18,8 @@
     [super viewDidLoad];
     UIScrollView* scrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
     scrollView.contentSize = CGSizeMake(self.view.frame.size.width*8, self.view.frame.size.height);
+    
+    [self.view addSubview:scrollView];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
