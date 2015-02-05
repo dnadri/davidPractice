@@ -20,7 +20,7 @@
     scrollView.contentSize = CGSizeMake(self.view.frame.size.width*8, self.view.frame.size.height);
     
     [self.view addSubview:scrollView];
-    // Test3 adfsadfasdsdf
+    // Test3 adfsadfasdsdfaaaaaa
     // Do any additional setup after loading the view, typically from a nib.
 }
 
