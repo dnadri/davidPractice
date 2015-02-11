@@ -37,7 +37,7 @@
         subview.backgroundColor = [colors objectAtIndex:i];
         [self.scrollView addSubview:subview];
     }
-
+    
 }
 
 - (void)didReceiveMemoryWarning {
