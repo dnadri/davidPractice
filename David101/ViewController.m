@@ -8,11 +8,23 @@
 
 #import "ViewController.h"
 
+typedef NS_ENUM(NSInteger, DVPageType) {
+    DVPageTypeDefault,
+    DVPageType1,
+    DVPageType2,
+    DVPageType3,
+    DVPageType4,
+    DVPageType5,
+    DVPageType6,
+    DVPageType7,
+};
+
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,9 +36,7 @@
     self.scrollView.showsHorizontalScrollIndicator = NO;
     [self.view addSubview:self.scrollView];
     
-    NSArray *colors = [NSArray arrayWithObjects:[UIColor whiteColor], [UIColor greenColor], [UIColor blueColor], [UIColor cyanColor], [UIColor redColor], [UIColor orangeColor], [UIColor lightGrayColor], [UIColor blackColor], nil];
-    
-    for (int i = 0; i < colors.count; i++) {
+    for (NSInteger i = 0; i < [[ViewController preferredOrder] count]; i++) {
         CGRect frame;
         frame.origin.x = self.scrollView.frame.size.width * i;
         frame.origin.y = 0;
@@ -34,24 +44,37 @@
         
         //adds a subview (colored background) to each of the 8 pages in the scrollView
         UIView *subview = [[UIView alloc] initWithFrame:frame];
-        subview.backgroundColor = [colors objectAtIndex:i];
+        subview.backgroundColor = [ViewController colorForType:[ViewController preferredOrder][i]];
         [self.scrollView addSubview:subview];
     }
     
+}
+
++ (NSArray*) preferredOrderOfTypes {
+    DVPageType *preferredOrder = [DVPageType arrayWithObjects:[UIColor whiteColor], [UIColor greenColor], [UIColor blueColor], [UIColor cyanColor], [UIColor redColor], [UIColor orangeColor], [UIColor lightGrayColor], [UIColor blackColor], nil];
     
+    return @[@(DVPageTypeDefault), @(DVPageType1), @(DVPageType2), @(DVPageType3), @(DVPageType4), @(DVPageType5), @(DVPageType6), @(DVPageType7)];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
--(void) scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-    NSLog(@"scrollViewDidEndDragging");
-}
-
--(void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    NSLog(@"scrollViewDidEndDecelerating");
++ (UIColor*) colorForType:(DVPageType)pageType {
+    switch (pageType) {
+        case DVPageTypeDefault:
+            return @(DVPageTypeDefault);
+        case DVPageType1:
+            return @(DVPageType1);
+        case DVPageType2:
+            return @(DVPageType2);
+        case DVPageType3:
+            return @(DVPageType3);
+        case DVPageType4:
+            return @(DVPageType4);
+        case DVPageType5:
+            return @(DVPageType5);
+        case DVPageType6:
+            return @(DVPageType6);
+        case DVPageType7:
+            return @(DVPageType7);
+    }
 }
 
 @end
