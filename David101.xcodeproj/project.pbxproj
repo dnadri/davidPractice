@@ -12,6 +12,7 @@
 		71E065D51A82E9C60057F68E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E065D41A82E9C60057F68E /* MainViewController.m */; };
 		71E065DA1A82E9C60057F68E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71E065D91A82E9C60057F68E /* Images.xcassets */; };
 		71E065E91A82E9C60057F68E /* David101Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E065E81A82E9C60057F68E /* David101Tests.m */; };
+		71E7872F1A92A2AC007799DF /* DNImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E7872E1A92A2AC007799DF /* DNImageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,8 @@
 		71E065E21A82E9C60057F68E /* David101Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = David101Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71E065E71A82E9C60057F68E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71E065E81A82E9C60057F68E /* David101Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = David101Tests.m; sourceTree = "<group>"; };
+		71E7872D1A92A2AC007799DF /* DNImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNImageViewController.h; sourceTree = "<group>"; };
+		71E7872E1A92A2AC007799DF /* DNImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNImageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 				71E065D11A82E9C60057F68E /* AppDelegate.m */,
 				71E065D31A82E9C60057F68E /* MainViewController.h */,
 				71E065D41A82E9C60057F68E /* MainViewController.m */,
+				71E7872D1A92A2AC007799DF /* DNImageViewController.h */,
+				71E7872E1A92A2AC007799DF /* DNImageViewController.m */,
 				71E065D91A82E9C60057F68E /* Images.xcassets */,
 				71E065CC1A82E9C60057F68E /* Supporting Files */,
 			);
@@ -213,6 +218,7 @@
 			files = (
 				71E065D51A82E9C60057F68E /* MainViewController.m in Sources */,
 				71E065D21A82E9C60057F68E /* AppDelegate.m in Sources */,
+				71E7872F1A92A2AC007799DF /* DNImageViewController.m in Sources */,
 				71E065CF1A82E9C60057F68E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
