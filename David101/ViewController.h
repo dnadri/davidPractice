@@ -12,8 +12,5 @@
 
 @property (nonatomic, strong) UIScrollView *scrollView;
 
-+ (NSArray*) preferredOrderOfTypes;
-+ (UIColor*) colorForType:(DVPageType)pageType;
-
 @end
 
