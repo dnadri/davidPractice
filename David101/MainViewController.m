@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 David Nadri. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MainViewController.h"
 
 typedef NS_ENUM(NSInteger, DVPageType) {
     DVPageTypeDefault,
@@ -19,14 +19,11 @@ typedef NS_ENUM(NSInteger, DVPageType) {
     DVPageType7,
 };
 
-@interface ViewController ()
-
-@end
-
-@implementation ViewController
+@implementation MainViewController
 
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
@@ -36,7 +33,7 @@ typedef NS_ENUM(NSInteger, DVPageType) {
     self.scrollView.showsHorizontalScrollIndicator = NO;
     [self.view addSubview:self.scrollView];
     
-    for (NSInteger i = 0; i < [[ViewController preferredOrder] count]; i++) {
+    for (NSInteger i = 0; i < [[MainViewController preferredOrderOfTypes] count]; i++) {
         CGRect frame;
         frame.origin.x = self.scrollView.frame.size.width * i;
         frame.origin.y = 0;
@@ -44,36 +41,35 @@ typedef NS_ENUM(NSInteger, DVPageType) {
         
         //adds a subview (colored background) to each of the 8 pages in the scrollView
         UIView *subview = [[UIView alloc] initWithFrame:frame];
-        subview.backgroundColor = [ViewController colorForType:[ViewController preferredOrder][i]];
+        subview.backgroundColor = [MainViewController colorForType:[[MainViewController preferredOrderOfTypes][i] integerValue]];
         [self.scrollView addSubview:subview];
     }
-    
 }
 
-+ (NSArray*) preferredOrderOfTypes {
-    DVPageType *preferredOrder = [DVPageType arrayWithObjects:[UIColor whiteColor], [UIColor greenColor], [UIColor blueColor], [UIColor cyanColor], [UIColor redColor], [UIColor orangeColor], [UIColor lightGrayColor], [UIColor blackColor], nil];
-    
++ (NSArray*) preferredOrderOfTypes
+{
     return @[@(DVPageTypeDefault), @(DVPageType1), @(DVPageType2), @(DVPageType3), @(DVPageType4), @(DVPageType5), @(DVPageType6), @(DVPageType7)];
 }
 
-+ (UIColor*) colorForType:(DVPageType)pageType {
++ (UIColor *)colorForType:(DVPageType)pageType
+{
     switch (pageType) {
         case DVPageTypeDefault:
-            return @(DVPageTypeDefault);
+            return [UIColor whiteColor];
         case DVPageType1:
-            return @(DVPageType1);
+            return [UIColor greenColor];
         case DVPageType2:
-            return @(DVPageType2);
+            return [UIColor blueColor];
         case DVPageType3:
-            return @(DVPageType3);
+            return [UIColor cyanColor];
         case DVPageType4:
-            return @(DVPageType4);
+            return [UIColor redColor];
         case DVPageType5:
-            return @(DVPageType5);
+            return [UIColor orangeColor];
         case DVPageType6:
-            return @(DVPageType6);
+            return [UIColor lightGrayColor];
         case DVPageType7:
-            return @(DVPageType7);
+            return [UIColor blackColor];
     }
 }
 

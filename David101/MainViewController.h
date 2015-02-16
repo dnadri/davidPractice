@@ -8,12 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <UIScrollViewDelegate>
+@interface MainViewController : UIViewController <UIScrollViewDelegate>
 
 @property (nonatomic, strong) UIScrollView *scrollView;
-
-+ (NSArray*) preferredOrderOfTypes;
-+ (UIColor*) colorForType:(DVPageType)pageType;
 
 @end
 
