@@ -53,7 +53,7 @@ typedef NS_ENUM(NSInteger, DVPageType) {
 + (NSArray*) preferredOrderOfTypes {
     DVPageType *preferredOrder = [DVPageType arrayWithObjects:[UIColor whiteColor], [UIColor greenColor], [UIColor blueColor], [UIColor cyanColor], [UIColor redColor], [UIColor orangeColor], [UIColor lightGrayColor], [UIColor blackColor], nil];
     
-    return @[ @(DVPageDefault), @(DVPageType1), @(DVPageType2), @(DVPageType3), @(DVPageType4), @(DVPageType5), @(DVPageType6), @(DVPageType7), nil];
+    return @[@(DVPageTypeDefault), @(DVPageType1), @(DVPageType2), @(DVPageType3), @(DVPageType4), @(DVPageType5), @(DVPageType6), @(DVPageType7)];
 }
 
 + (UIColor*) colorForType:(DVPageType)pageType {
