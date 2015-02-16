@@ -51,59 +51,30 @@ typedef NS_ENUM(NSInteger, DVPageType) {
 }
 
 + (NSArray*) preferredOrderOfTypes {
-    NSArray *colors = [NSArray arrayWithObjects:[UIColor whiteColor], [UIColor greenColor], [UIColor blueColor], [UIColor cyanColor], [UIColor redColor], [UIColor orangeColor], [UIColor lightGrayColor], [UIColor blackColor], nil];
+    DVPageType *preferredOrder = [DVPageType arrayWithObjects:[UIColor whiteColor], [UIColor greenColor], [UIColor blueColor], [UIColor cyanColor], [UIColor redColor], [UIColor orangeColor], [UIColor lightGrayColor], [UIColor blackColor], nil];
     
-    return colors;
+    return @[ @(DVPageDefault), @(DVPageType1), @(DVPageType2), @(DVPageType3), @(DVPageType4), @(DVPageType5), @(DVPageType6), @(DVPageType7), nil];
 }
 
 + (UIColor*) colorForType:(DVPageType)pageType {
     switch (pageType) {
         case DVPageTypeDefault:
-            NSLog(@"DVPageTypeDefault");
-            return DVPageTypeDefault;
-            break;
+            return @(DVPageTypeDefault);
         case DVPageType1:
-            NSLog(@"DVPageType1");
-            return DVPageType1;
-            break;
+            return @(DVPageType1);
         case DVPageType2:
-            NSLog(@"DVPageType2");
-            return DVPageType2;
-            break;
+            return @(DVPageType2);
         case DVPageType3:
-            NSLog(@"DVPageType3");
-            return DVPageType3;
-            break;
+            return @(DVPageType3);
         case DVPageType4:
-            NSLog(@"DVPageType4");
-            return DVPageType4;
-            break;
+            return @(DVPageType4);
         case DVPageType5:
-            NSLog(@"DVPageType5");
-            return DVPageType5;
-            break;
+            return @(DVPageType5);
         case DVPageType6:
-            NSLog(@"DVPageType6");
-            return DVPageType6;
-            break;
+            return @(DVPageType6);
         case DVPageType7:
-            NSLog(@"DVPageType7");
-            return DVPageType7;
-            break;
+            return @(DVPageType7);
     }
-}
-
-- (void) didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
--(void) scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-    NSLog(@"scrollViewDidEndDragging");
-}
-
--(void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    NSLog(@"scrollViewDidEndDecelerating");
 }
 
 @end
