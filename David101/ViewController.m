@@ -36,7 +36,7 @@ typedef NS_ENUM(NSInteger, DVPageType) {
     self.scrollView.showsHorizontalScrollIndicator = NO;
     [self.view addSubview:self.scrollView];
     
-    for (NSInteger i = 0; i < [ViewController preferredOrder] count]; i++) {
+    for (NSInteger i = 0; i < [[ViewController preferredOrder] count]; i++) {
         CGRect frame;
         frame.origin.x = self.scrollView.frame.size.width * i;
         frame.origin.y = 0;
