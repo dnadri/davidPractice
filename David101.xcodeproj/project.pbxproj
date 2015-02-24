@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7173BB5A1A9C079800328E0E /* DNImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7173BB591A9C079800328E0E /* DNImageView.m */; };
 		71E065CF1A82E9C60057F68E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E065CE1A82E9C60057F68E /* main.m */; };
 		71E065D21A82E9C60057F68E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E065D11A82E9C60057F68E /* AppDelegate.m */; };
 		71E065D51A82E9C60057F68E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E065D41A82E9C60057F68E /* MainViewController.m */; };
@@ -25,6 +26,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7173BB581A9C079800328E0E /* DNImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DNImageView.h; path = ../DNImageView.h; sourceTree = "<group>"; };
+		7173BB591A9C079800328E0E /* DNImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DNImageView.m; path = ../DNImageView.m; sourceTree = "<group>"; };
 		71E065C91A82E9C60057F68E /* David101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = David101.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71E065CD1A82E9C60057F68E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71E065CE1A82E9C60057F68E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -81,6 +84,8 @@
 				71E065D11A82E9C60057F68E /* AppDelegate.m */,
 				71E065D31A82E9C60057F68E /* MainViewController.h */,
 				71E065D41A82E9C60057F68E /* MainViewController.m */,
+				7173BB581A9C079800328E0E /* DNImageView.h */,
+				7173BB591A9C079800328E0E /* DNImageView.m */,
 				71E065D91A82E9C60057F68E /* Images.xcassets */,
 				71E065CC1A82E9C60057F68E /* Supporting Files */,
 			);
@@ -211,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7173BB5A1A9C079800328E0E /* DNImageView.m in Sources */,
 				71E065D51A82E9C60057F68E /* MainViewController.m in Sources */,
 				71E065D21A82E9C60057F68E /* AppDelegate.m in Sources */,
 				71E065CF1A82E9C60057F68E /* main.m in Sources */,

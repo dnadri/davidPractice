@@ -50,6 +50,7 @@ typedef NS_ENUM(NSInteger, DVPageType) {
         subview.backgroundColor = [MainViewController colorForType:[self.preferredOrderOfTypes[i] integerValue]];
         [self.scrollView addSubview:subview];
     }
+    
 }
 
 - (NSArray*)preferredOrderOfTypes
