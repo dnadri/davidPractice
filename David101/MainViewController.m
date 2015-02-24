@@ -19,6 +19,12 @@ typedef NS_ENUM(NSInteger, DVPageType) {
     DVPageType7,
 };
 
+@interface MainViewController()
+
+@property (nonatomic, strong) NSArray* preferredOrderOfTypes;
+
+@end
+
 @implementation MainViewController
 
 
@@ -33,7 +39,7 @@ typedef NS_ENUM(NSInteger, DVPageType) {
     self.scrollView.showsHorizontalScrollIndicator = NO;
     [self.view addSubview:self.scrollView];
     
-    for (NSInteger i = 0; i < [[MainViewController preferredOrderOfTypes] count]; i++) {
+    for (NSInteger i = 0; i < [self.preferredOrderOfTypes count]; i++) {
         CGRect frame;
         frame.origin.x = self.scrollView.frame.size.width * i;
         frame.origin.y = 0;
@@ -41,14 +47,19 @@ typedef NS_ENUM(NSInteger, DVPageType) {
         
         //adds a subview (colored background) to each of the 8 pages in the scrollView
         UIView *subview = [[UIView alloc] initWithFrame:frame];
-        subview.backgroundColor = [MainViewController colorForType:[[MainViewController preferredOrderOfTypes][i] integerValue]];
+        subview.backgroundColor = [MainViewController colorForType:[self.preferredOrderOfTypes[i] integerValue]];
         [self.scrollView addSubview:subview];
     }
 }
 
-+ (NSArray*) preferredOrderOfTypes
+- (NSArray*)preferredOrderOfTypes
 {
-    return @[@(DVPageTypeDefault), @(DVPageType1), @(DVPageType2), @(DVPageType3), @(DVPageType4), @(DVPageType5), @(DVPageType6), @(DVPageType7)];
+    if(!_preferredOrderOfTypes)
+    {
+        _preferredOrderOfTypes =  @[@(DVPageTypeDefault), @(DVPageType1), @(DVPageType2), @(DVPageType3), @(DVPageType4), @(DVPageType5), @(DVPageType6), @(DVPageType7)];
+    }
+
+    return _preferredOrderOfTypes;
 }
 
 + (UIColor *)colorForType:(DVPageType)pageType
